@@ -271,6 +271,8 @@ namespace PuppeteerSharp
             }
 
             request.Response?.BodyLoadedTaskWrapper.TrySetResult(true);
+            request.Timestamp = e.Timestamp;
+            request.EncodedDataLength = e.EncodedDataLength;
 
             ForgetRequest(request, true);
 

@@ -88,6 +88,12 @@ namespace PuppeteerSharp
         public string Url { get; internal set; }
 
         /// <inheritdoc/>
+        public double Timestamp { get; set; }
+
+        /// <inheritdoc/>
+        public double EncodedDataLength { get; set; }
+
+        /// <inheritdoc/>
         public IRequest[] RedirectChain => RedirectChainList.ToArray();
 
         internal bool FromMemoryCache { get; set; }

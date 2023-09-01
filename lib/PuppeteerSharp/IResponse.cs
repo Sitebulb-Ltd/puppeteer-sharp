@@ -69,6 +69,11 @@ namespace PuppeteerSharp
         string StatusText { get; }
 
         /// <summary>
+        /// Gets and sets if response is Base64 Encoded.
+        /// </summary>
+        bool Base64Encoded { get; set; }
+
+        /// <summary>
         /// Remove server address.
         /// </summary>
         RemoteAddress RemoteAddress { get; }

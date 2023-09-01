@@ -41,6 +41,16 @@ namespace PuppeteerSharp
         string InterceptionId { get; }
 
         /// <summary>
+        /// Gets or sets Timestamp.
+        /// </summary>
+        double Timestamp { get; set; }
+
+        /// <summary>
+        /// Gets or sets Total number of bytes received for this request.
+        /// </summary>
+        double EncodedDataLength { get; set; }
+
+        /// <summary>
         /// Gets the type of the resource.
         /// </summary>
         /// <value>The type of the resource.</value>

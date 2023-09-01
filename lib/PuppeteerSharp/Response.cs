@@ -86,6 +86,11 @@ namespace PuppeteerSharp
         /// <inheritdoc/>
         public IFrame Frame => Request.Frame;
 
+        /// <summary>
+        /// Gets and sets if the body is Base64 encoded.
+        /// </summary>
+        public bool Base64Encoded { get; set; }
+
         internal TaskCompletionSource<bool> BodyLoadedTaskWrapper { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);
 
         /// <summary>
@@ -105,7 +110,9 @@ namespace PuppeteerSharp
                         RequestId = Request.RequestId,
                     }).ConfigureAwait(false);
 
-                    _buffer = response.Base64Encoded
+                    Base64Encoded = response.Base64Encoded;
+
+                    _buffer = Base64Encoded
                         ? Convert.FromBase64String(response.Body)
                         : Encoding.UTF8.GetBytes(response.Body);
                 }
