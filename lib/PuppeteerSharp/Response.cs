@@ -32,6 +32,7 @@ namespace PuppeteerSharp
             Url = request.Url;
             _fromDiskCache = responseMessage.FromDiskCache;
             FromServiceWorker = responseMessage.FromServiceWorker;
+            MimeType = responseMessage.MimeType;
 
             Headers = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
             var headers = extraInfo != null ? extraInfo.Headers : responseMessage.Headers;

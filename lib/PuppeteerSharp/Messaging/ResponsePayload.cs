@@ -24,5 +24,7 @@ namespace PuppeteerSharp.Messaging
         public string RemoteIPAddress { get; set; }
 
         public int RemotePort { get; set; }
+
+        public string MimeType { get; set; }
     }
 }
