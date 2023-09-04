@@ -94,6 +94,12 @@ namespace PuppeteerSharp
         Rendering,
 
         /// <summary>
+        /// Target type intervention.
+        /// </summary>
+        [EnumMember(Value = "intervention")]
+        Intervention,
+
+        /// <summary>
         /// Webview.
         /// </summary>
         Webview,

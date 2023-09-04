@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PuppeteerSharp.Helpers.Json;
 using PuppeteerSharp.Messaging;
@@ -87,9 +88,20 @@ namespace PuppeteerSharp
         public IFrame Frame => Request.Frame;
 
         /// <summary>
+        /// Gets or sets Timing information for the given request.
+        /// </summary>
+        public ResourceTiming Timing { get; set; }
+
+        /// <summary>
         /// Gets and sets if the body is Base64 encoded.
         /// </summary>
         public bool Base64Encoded { get; set; }
+
+        /// <inheritdoc/>
+        public string MimeType { get; set; }
+
+        /// <inheritdoc/>
+        public string Protocol { get; set; }
 
         internal TaskCompletionSource<bool> BodyLoadedTaskWrapper { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);
 

@@ -68,6 +68,11 @@ namespace PuppeteerSharp
         bool IsNavigationRequest { get; }
 
         /// <summary>
+        /// Gets or sets Whether is loaded via link preload.
+        /// </summary>
+        bool IsLinkPreload { get; set; }
+
+        /// <summary>
         /// Gets the HTTP method.
         /// </summary>
         /// <value>HTTP method.</value>

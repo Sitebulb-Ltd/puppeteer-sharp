@@ -19,5 +19,10 @@ namespace PuppeteerSharp
         /// </summary>
         /// <value>The frame.</value>
         public IFrame Frame { get; set; }
+
+        /// <summary>
+        /// Gets and sets the Reason for frame event.
+        /// </summary>
+        public string Reason { get; set; }
     }
 }

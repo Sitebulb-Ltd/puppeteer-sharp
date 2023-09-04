@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace PuppeteerSharp
@@ -77,6 +78,21 @@ namespace PuppeteerSharp
         /// Remove server address.
         /// </summary>
         RemoteAddress RemoteAddress { get; }
+
+        /// <summary>
+        /// Gets or sets Timing information for the given request.
+        /// </summary>
+        ResourceTiming Timing { get; set; }
+
+        /// <summary>
+        /// Gets or sets Resource mimeType as determined by the browser.
+        /// </summary>
+        string MimeType { get; set; }
+
+        /// <summary>
+        /// Gets or sets Protocol used to fetch this request.
+        /// </summary>
+        string Protocol { get; set; }
 
         /// <summary>
         /// A <see cref="Frame"/> that initiated this request. Or null if navigating to error pages.

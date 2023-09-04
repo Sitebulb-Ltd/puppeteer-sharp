@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using PuppeteerSharp.Messaging;
 
 namespace PuppeteerSharp
@@ -74,6 +75,9 @@ namespace PuppeteerSharp
 
         /// <inheritdoc/>
         public bool IsNavigationRequest { get; }
+
+        /// <inheritdoc/>
+        public bool IsLinkPreload { get; set; }
 
         /// <inheritdoc/>
         public HttpMethod Method { get; internal set; }
